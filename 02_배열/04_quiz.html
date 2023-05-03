@@ -1,0 +1,12 @@
+<script>
+    var lesselafim = ['사쿠라', '김채원', '카즈하', '허윤진', '홍은채'];
+    while(lesselafim.length != 0){
+        var name = prompt(`${lesselafim}\n[르세라핌]삭제할 멤버 이름 입력`);
+        var idx = lesselafim.indexOf(name);
+        if(idx === -1){
+            alert(`${name}은 잘못된 이름입니다.`);
+            continue;
+        }
+        lesselafim.splice(idx,1);
+    } 
+</script>
