@@ -1,0 +1,20 @@
+<script>
+    var cm = Number(prompt(`키 입력`));
+    var kg = Number(prompt(`체중 입력`));
+
+    debugger;
+    var bmi = CalcBMI(cm, kg);
+    var str = `키 -> ${cm}, 체중 -> ${kg}의 체질량지수는 : ${bmi}입니다.\n`;
+    if(bmi >= 25.0){
+        alert(`${str}당신은 과체중입니다.`);
+    }else if(bmi <= 18.5){
+        alert(`${str}당신은 저체중입니다.`);
+    }else {
+        alert(`${str}당신은 정상체중입니다.`);
+    }
+
+    function CalcBMI(pCm, pKg){
+        var m = pCm/100;
+        return (pKg / (m ** 2)).toFixed(2);
+    }
+</script>

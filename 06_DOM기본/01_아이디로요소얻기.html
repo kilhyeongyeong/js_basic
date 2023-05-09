@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana" style="background: greenyellow;">바나나</li>
+        <li id="grape">포도</li>
+        <li id="peach">복숭아</li>
+    </ul>
+
+    <script>
+        const $banana = document.getElementById("banana");
+        console.log($banana);
+        
+        let setColorNumber = Number(prompt(`banana의 배경색깔을 지정해주세요.\n1:빨강\n2:파랑`));
+        if(setColorNumber === 1){
+            $banana.style.backgroundColor = 'red';
+        }else if(setColorNumber === 2){
+            $banana.style.backgroundColor = 'blue';
+        }
+        $banana.style.width = "200px";
+
+        // const $peach = document.getElementById("peach");
+        const $peach = document.querySelector("#peach"); // #, . 등을 이용해 얻어옴
+        console.log($peach);
+        $peach.style.color = 'pink';
+
+    </script>
+</body>
+</html>

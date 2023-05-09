@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+    <style>
+        #list1>li:last-child {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="list1">
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+            <li>리스트6</li>
+            <li>리스트7</li>
+        </ul>
+    </div>
+    <script>
+        // 홀수
+        const oddList = document.querySelectorAll('#list1>li:nth-child(odd)');
+        for(const $odd of oddList){
+            $odd.style.backgroundColor = 'yellow';
+        }
+        // 짝수
+        const evenList = document.querySelectorAll('li:nth-child(even)');
+        for(const $even of evenList){
+            $even.style.backgroundColor = 'gray';
+        }
+        // 첫번째 요소
+        const $firstElement = document.querySelector('li');
+        $firstElement.style.color = 'red';
+        // 마지막 요소
+        const liList = document.querySelectorAll('li');
+        liList[liList.length-1].style.color = 'green';
+        // 3번째 이후? 부터?
+        const elements = document.querySelectorAll('li:nth-child(3)~li');
+        for(const $element of elements){
+            $element.style.border = "2px dashed violet";
+        }
+    </script>
+</body>
+</html>
