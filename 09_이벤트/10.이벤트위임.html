@@ -70,6 +70,26 @@
             // 3. 텍스트를 em.msg에 복사
             document.querySelector('.msg').textContent = e.target.textContent;
         }
+
+        const $addButton = document.getElementById('add');
+        const $textInput = document.querySelector('.text-box');
+
+        function makeNewFruit() {
+            // input 태그 내부에 작성된 값은 .value로 얻을 수 있습니다.
+            console.log(`현재 input에 기입된 텍스트 : ${$textInput.value}`);
+
+            const $newLi = document.createElement('li');
+            $newLi.textContent = $textInput.value;
+            $newLi.setAttribute('id', $textInput.value.toLowerCase() );
+            $fruits.appendChild($newLi);
+
+            $textInput.value = '';
+
+            
+        }
+
+        $addButton.onclick = makeNewFruit;
+
     </script>
 </body>
 </html>
